@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataBaseObjectModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="caa1700a-dc74-43e9-bf19-5422485f1da1" dbName="OSDB" connectionInfo="77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxEZXZFeHByZXNzWHBvR2VuZXJhdG9yU2V0dGluZ3MgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeG1sbnM6eHNkPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgcHJvdmlkZXJLZXk9Ik1TU3FsU2VydmVyIj4NCiAgPHBhcmFtZXRlcj4NCiAgICA8Q29ubmVjdGlvblBhZ2VTZXR0aW5nc0l0ZW0gbmFtZT0ic2VydmVyIiB2YWx1ZT0iMTkyLjE2OC4xLjIyNSIgLz4NCiAgICA8Q29ubmVjdGlvblBhZ2VTZXR0aW5nc0l0ZW0gbmFtZT0iZGF0YWJhc2UiIHZhbHVlPSJPU0RCIiAvPg0KICAgIDxDb25uZWN0aW9uUGFnZVNldHRpbmdzSXRlbSBuYW1lPSJ1c2VJbnRlZ3JhdGVkU2VjdXJpdHkiIHZhbHVlPSJGYWxzZSIgLz4NCiAgICA8Q29ubmVjdGlvblBhZ2VTZXR0aW5nc0l0ZW0gbmFtZT0idXNlcmlkIiB2YWx1ZT0ic2EiIC8+DQogICAgPENvbm5lY3Rpb25QYWdlU2V0dGluZ3NJdGVtIG5hbWU9InBhc3N3b3JkIiB2YWx1ZT0iaXRnNHUiIC8+DQogICAgPENvbm5lY3Rpb25QYWdlU2V0dGluZ3NJdGVtIG5hbWU9InJlYWQgb25seSIgdmFsdWU9IjEiIC8+DQogICAgPENvbm5lY3Rpb25QYWdlU2V0dGluZ3NJdGVtIG5hbWU9ImdlbmVyYXRlQ29ubmVjdGlvbkhlbHBlciIgdmFsdWU9InRydWUiIC8+DQogIDwvcGFyYW1ldGVyPg0KPC9EZXZFeHByZXNzWHBvR2VuZXJhdG9yU2V0dGluZ3M+" namespace="OSModel.OSDB" connectionString="XpoProvider=MSSqlServer;data source=192.168.1.225;user id=sa;password=itg4u;initial catalog=OSDB;Persist Security Info=true" dataBaseShemaInfo="H4sIAAAAAAAEAMVSXU/CMBR9N/E/LHvGdVMISLoRGWqMSgig8bVsd1tj15K2+/DfWzY02dD46FvvuefknNwePKtzZpUgFRXctz3HtWfB+RmeEwUbLSRJ4YEnwjIsrqa1or6dab2fIlRVlVNdOUKm6NJ1PfT2/LSJMsjJBeVKEx6B/a2K/1bZxtWy8JbsGKjGErXIIQXEKymiDvzaRg4WUN7WewlKOQuiiVN6E8cbWMe1f5ickeMOrLBgupDgcyi0JGxgrYodo9EjfGzFO3B/N5nE3ng0jMeuC8NrgtGXReMXMqIUqCXJYV0waEAD38QmGiS0PuZqoU2RdKA15KKEPrFF+9zQXD544VFGeAoxRs3cREA/ZcDmMnuQmv5ztl9i4HvgIImGUOQ5cK0CLQvA6ATukBegaGqed9SUoafo7hrZsmDs0Js5ZKSkQppSJMR8N0YnG1Nt1Ot28Alzr45/BAMAAA==" generateConnectionHelper="true" generateStoredProcedures="false" fieldNameCase="Unchanged" generateDefaultConstructors="false" useNameOf="true" xmlns="http://schemas.microsoft.com/dsltools/ORMDataModel">
+  <classes>
+    <dataBaseObjectModelHasClasses Id="a2bf2712-e9f2-4e65-9e3f-e309f901a07e">
+      <xpObject Id="18ad59a6-cc4f-473a-b8cd-e7068897fa1d" name="XPOBase" baseClass="XPObject" nonPersistent="true" virtualName="XPOBase">
+        <fields>
+          <generalXpObjectHasFields Id="0a531611-cc2c-44fe-919d-9ee423008085">
+            <field Id="b9e5b993-2a4e-4d67-80c0-a979518a256b" name="DateCreated" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a8c35945-8da2-49e1-af16-8fe92c1ee9e0">
+            <field Id="c0dc5c3f-0792-4391-b966-3013788f909a" name="DateModified" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="39808179-4509-4547-a706-af3d994e3cf5">
+            <field Id="1bc011cd-4bb7-48e1-a6dd-33748d34c14e" name="CreatedByUser" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="0c206b22-193a-46f2-985e-aeca9619a99c">
+      <xpObject Id="25ba9da1-6cbe-4dbd-ada9-745936c4a0a0" name="XPOAddress" baseClass="XPOBase" virtualBaseClass="XPOBase" mapInheritance="OwnTable" virtualName="XPOAddress">
+        <fields>
+          <generalXpObjectHasFields Id="a7fd1f43-88a6-4315-9588-03ff2abb88a7">
+            <field Id="3c1200b8-d5d0-4586-9fd8-5a9c4727c1cc" name="Address1" displayName="Address 1" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="70" xMLDocComments="Contains first address line" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6cb4aa33-ac5f-4919-b4d7-8f151da67ec2">
+            <field Id="b1f3654a-bc32-47c3-8a9a-ada4dbe73725" name="Address2" displayName="Address 2" virtualColumnType="String" delayedUpdateModifiedOnly="false" xMLDocComments="Contains second address line" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="28251728-67c1-44d4-9e2c-b7f72d716b54">
+            <field Id="4e0ee315-360d-4bc2-8634-5d88c12f9ab8" name="State" displayName="State" virtualColumnType="XPOState" logicalType="XPOState" delayedUpdateModifiedOnly="false" xMLDocComments="State" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b938fb64-04c1-495d-b563-58793fcec042">
+            <field Id="687548c0-0774-4676-aa33-c89a041cbff0" name="ProvinceRegion" displayName="Province/Region" virtualColumnType="String" delayedUpdateModifiedOnly="false" xMLDocComments="Province or Region for forign addresses" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="db434cf4-bd5f-4563-9ea3-bf30d9eb1bce">
+            <field Id="b9fb3c67-258f-437c-ae9c-f15566b8aa04" name="PostalCode" displayName="Postal Code" virtualColumnType="String" delayedUpdateModifiedOnly="false" xMLDocComments="Zip or Postal Code" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a72ec290-413a-47ec-84ca-5a9ae8999196">
+            <field Id="5c150917-79ba-4879-a6f8-20c1117e1722" name="Person" virtualColumnType="XPOPerson" logicalType="XPOPerson" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <superClass>
+          <inheritance Id="478c2431-6e86-4211-9e8c-0fcae257546e">
+            <xpObjectMoniker Id="18ad59a6-cc4f-473a-b8cd-e7068897fa1d" />
+          </inheritance>
+        </superClass>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="e87d4b07-1b32-45cc-80d1-67e80598bac6">
+      <xpObject Id="3543dd92-6433-46c0-9a84-11c5129eb9ae" name="XPOPerson" baseClass="XPOBase" virtualBaseClass="XPOBase" virtualName="XPOPerson">
+        <fields>
+          <generalXpObjectHasFields Id="50a9d552-59f1-477d-a61f-32e0b69f706b">
+            <field Id="9369aafd-498f-46b0-91b5-d26320f54819" name="FirstName" displayName="First Name" virtualColumnType="String" delayedUpdateModifiedOnly="false" xMLDocComments="Contains persons first name" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="bdd54dc1-4dd0-4211-9e8a-8572b8f2c2b4">
+            <field Id="d201a386-4b9f-4c74-9525-29e0a2f98253" name="LastName" displayName="Last Name" virtualColumnType="String" delayedUpdateModifiedOnly="false" xMLDocComments="Contains persons last name" />
+          </generalXpObjectHasFields>
+        </fields>
+        <superClass>
+          <inheritance Id="8a12040b-21df-44bc-8ba8-c6255cae5ee9">
+            <xpObjectMoniker Id="18ad59a6-cc4f-473a-b8cd-e7068897fa1d" />
+          </inheritance>
+        </superClass>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="3ef364da-a0fb-4dbc-a609-8c86064fe5bc">
+      <xpObject Id="f2aa7520-3b96-400b-bbde-1fb6186b8a89" name="XPOState" baseClass="XPObject" virtualName="XPOState">
+        <fields>
+          <generalXpObjectHasFields Id="19769402-4758-45ff-b914-d61c6d6dc4ed">
+            <field Id="90cece6b-e715-498f-bf95-a5c7b27efa5f" name="State" key="true" displayName="State" virtualColumnType="String" delayedUpdateModifiedOnly="false" xMLDocComments="Contains State Name" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+  </classes>
+</dataBaseObjectModel>

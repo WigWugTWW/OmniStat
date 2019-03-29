@@ -1,0 +1,853 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataBaseObjectModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="6b2c84e8-bd84-4877-b646-12d217515b36" dbName="OSDB" connectionInfo="77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxEZXZFeHByZXNzWHBvR2VuZXJhdG9yU2V0dGluZ3MgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeG1sbnM6eHNkPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgcHJvdmlkZXJLZXk9Ik1TU3FsU2VydmVyIj4NCiAgPHBhcmFtZXRlcj4NCiAgICA8Q29ubmVjdGlvblBhZ2VTZXR0aW5nc0l0ZW0gbmFtZT0ic2VydmVyIiB2YWx1ZT0iMTkyLjE2OC4xLjIyNSIgLz4NCiAgICA8Q29ubmVjdGlvblBhZ2VTZXR0aW5nc0l0ZW0gbmFtZT0iZGF0YWJhc2UiIHZhbHVlPSJPU0RCIiAvPg0KICAgIDxDb25uZWN0aW9uUGFnZVNldHRpbmdzSXRlbSBuYW1lPSJ1c2VJbnRlZ3JhdGVkU2VjdXJpdHkiIHZhbHVlPSJGYWxzZSIgLz4NCiAgICA8Q29ubmVjdGlvblBhZ2VTZXR0aW5nc0l0ZW0gbmFtZT0idXNlcmlkIiB2YWx1ZT0ic2EiIC8+DQogICAgPENvbm5lY3Rpb25QYWdlU2V0dGluZ3NJdGVtIG5hbWU9InBhc3N3b3JkIiB2YWx1ZT0iaXRnNHUiIC8+DQogICAgPENvbm5lY3Rpb25QYWdlU2V0dGluZ3NJdGVtIG5hbWU9InJlYWQgb25seSIgdmFsdWU9IjEiIC8+DQogICAgPENvbm5lY3Rpb25QYWdlU2V0dGluZ3NJdGVtIG5hbWU9ImdlbmVyYXRlQ29ubmVjdGlvbkhlbHBlciIgdmFsdWU9InRydWUiIC8+DQogIDwvcGFyYW1ldGVyPg0KPC9EZXZFeHByZXNzWHBvR2VuZXJhdG9yU2V0dGluZ3M+" namespace="OSModel.OSDB" connectionString="XpoProvider=MSSqlServer;data source=192.168.1.225;user id=sa;password=itg4u;initial catalog=OSDB;Persist Security Info=true" dataBaseShemaInfo="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" generateConnectionHelper="true" generateStoredProcedures="false" fieldNameCase="Unchanged" generateDefaultConstructors="false" freezeLayout="true" useNameOf="true" xmlns="http://schemas.microsoft.com/dsltools/ORMDataModel">
+  <classes>
+    <dataBaseObjectModelHasClasses Id="ea83c879-7bd9-4116-8b8f-ef10526f951f">
+      <xpObject Id="876ede08-ec1a-46e6-8991-172157450419" name="XPOBase" baseClass="XPObject" userFileName="XPOBase" designerFileName="XPOBase.Designer" className="XPOBase" nonPersistent="true" virtualName="XPOBase">
+        <fields>
+          <generalXpObjectHasFields Id="33b8191c-f054-47f1-9b12-8639b2e2b485">
+            <field Id="0fb9e0ba-4ba8-4d32-aa5f-c758c07dadb1" name="DateCreated" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="7d5ea92e-6d0f-4b11-8a32-d6c4f5df7080">
+            <field Id="15b7587c-5862-4253-b962-78ddcba70a96" name="DateModified" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="4ccd63c4-949f-4dce-90c8-8132062fabb8">
+            <field Id="610ae8d5-c159-4935-a325-c59d90262b3a" name="UserCreated" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="dff460c7-5d2e-468b-a98e-c620c84e6164">
+            <field Id="3a836280-da1c-4cb6-aa5b-ab045910fd63" name="IPAddress" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="04f85bd6-2d51-4c91-8b0b-110bcce115ab">
+      <xpObject Id="8d8e7150-66dd-44b1-aee6-2c19e47f718c" name="XPOPerson" baseClass="XPOBase" userFileName="XPOPerson" designerFileName="XPOPerson.Designer" className="XPOPerson" virtualBaseClass="XPOBase" virtualName="XPOPerson">
+        <fields>
+          <generalXpObjectHasFields Id="6ec88f9e-4da0-4e06-a294-77fb020fecd6">
+            <field Id="275d9c7d-303b-4351-bb13-26c6e37f8fbd" name="FirstName" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6a8f8cd4-d663-4bcd-937c-365dc0500c10">
+            <field Id="2c67b8ed-d48b-40f8-be93-9fe60e58c743" name="LastName" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="ad7b6c98-7d90-4fcd-9cdb-efb1b9d80028">
+            <field Id="875642c1-4f22-401e-ae7d-caf1525588de" name="Address" virtualColumnType="XPOAddress" logicalType="XPOAddress" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <superClass>
+          <inheritance Id="1340ee77-caaa-45b5-a3cf-44d2b76d6171">
+            <xpObjectMoniker Id="876ede08-ec1a-46e6-8991-172157450419" />
+          </inheritance>
+        </superClass>
+        <saTargets>
+          <simpleAssociation Id="2d474bf7-84df-4f80-a5fe-8ed1cf4ed0bb" sourceCollectionName="XPOPlayersCollection" name="XPOPlayersReferencesXPOPerson" targetFieldName="Person">
+            <xpObjectMoniker Id="b4662ed4-9f4f-4c3f-92c9-b9c1eba84772" />
+          </simpleAssociation>
+        </saTargets>
+        <mMTarget>
+          <manyToManyRelationship Id="cadffa77-547f-4eff-98f7-1c53943f16a7" sourceCollectionName="XPOAddresses" name="XPOAddressReferencesXPOPerson" targetCollectionName="XPOPersons">
+            <xpObjectMoniker Id="9df47546-b366-46b6-9678-7480b2883020" />
+          </manyToManyRelationship>
+        </mMTarget>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="31d07e7d-fc7c-40f2-87ed-e22724a8fa81">
+            <collectionField Id="a8c17c3d-f114-4097-b597-79705bd8345f" name="XPOAddresses" />
+          </xpObjectHasCollectionFields>
+          <xpObjectHasCollectionFields Id="03ee1960-abbc-4f56-96a4-12cacc709faa">
+            <collectionField Id="8daf29b8-b493-4591-aeee-9a9c2944a2d7" name="XPOPlayersCollection" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="84b28fa7-4fdd-47f1-8f80-43654e6c133c">
+      <xpObject Id="9df47546-b366-46b6-9678-7480b2883020" name="XPOAddress" baseClass="XPOBase" userFileName="XPOAddress" designerFileName="XPOAddress.Designer" className="XPOAddress" virtualBaseClass="XPOBase" virtualName="XPOAddress">
+        <fields>
+          <generalXpObjectHasFields Id="386cfc3c-ef51-46af-bbb7-216e978f6138">
+            <field Id="cb1cb1e7-c57e-4e65-bf77-2e22b83ba397" name="Address1" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f58a7fd6-981f-4aaa-bbf5-533f35086df0">
+            <field Id="2e3b7107-560c-442d-bec8-b9a4b664203f" name="Address2" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="c0fe3440-85a9-4b34-bfe4-ca1f441a2151">
+            <field Id="e1400ab1-bb11-4b28-841a-ebd742e80a50" name="State" virtualColumnType="XPOState" logicalType="XPOState" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="647d5998-8748-43cc-8f27-136ce270c2d6">
+            <field Id="9abc7197-f2e6-4543-85eb-70ad67e8e2e6" name="ProvinceRegion" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="61d50615-69da-4cdc-8b4c-c54f39c653ec">
+            <field Id="16cedd92-fc03-40bd-afa0-aa113720c823" name="PostalCode" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="5e43befd-e508-45dc-83e5-797097eff46a">
+            <field Id="7a2e5b6e-202f-4a8f-9622-2f86f27a1b22" name="Person" virtualColumnType="XPOPerson" logicalType="XPOPerson" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <superClass>
+          <inheritance Id="ad3313ec-986c-4af4-89f8-3c4b7f068d3e">
+            <xpObjectMoniker Id="876ede08-ec1a-46e6-8991-172157450419" />
+          </inheritance>
+        </superClass>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="f09fe252-f1ed-49ef-9cd8-297c73f88779">
+            <collectionField Id="017c128f-bb69-4a5f-9fae-13db99e24223" name="XPOPersons" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="5310cb2f-dcd3-4c4b-9940-c944c28704ea">
+      <xpObject Id="4d9e2577-3cd1-4110-857b-444243d68a0e" name="XPOState" baseClass="XPObject" userFileName="XPOState" designerFileName="XPOState.Designer" className="XPOState" virtualName="XPOState">
+        <fields>
+          <generalXpObjectHasFields Id="b5b8c2b7-82fc-43e1-8156-5b6a65dba9db">
+            <field Id="bbca8495-cd61-4c9d-8e97-7fa1aae28e42" name="State" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <indexes>
+          <xpObjectHasIndexes Id="66527b3e-70c7-478a-abbf-5633c0133a0b">
+            <index Id="309fc32d-e8b9-4be6-b8cb-05eccef55c30" name="idxState" unique="true">
+              <fieldsInIndex>
+                <indexReferencesFields Id="8a37a733-9828-4a6c-9e2f-7afcf6a1db64">
+                  <fieldMoniker Id="bbca8495-cd61-4c9d-8e97-7fa1aae28e42" />
+                </indexReferencesFields>
+              </fieldsInIndex>
+            </index>
+          </xpObjectHasIndexes>
+        </indexes>
+        <saTargets>
+          <simpleAssociation Id="b1e786ab-ba99-41e8-b4d3-7e6e80a9c9af" sourceCollectionName="XPOAddresses" name="XPOAddressReferencesXPOState" targetFieldName="State">
+            <xpObjectMoniker Id="9df47546-b366-46b6-9678-7480b2883020" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="4caccc21-fbf4-4d87-ac14-cb46e73cbafb">
+            <collectionField Id="8db42f5b-d25f-42f9-a66c-82c762493727" name="XPOAddresses" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="40358743-f0b1-425d-bc68-93053faa75cc">
+      <xpObject Id="73368fad-958c-4f1b-bb4e-7126fbedde43" name="XPOContact" baseClass="XPObject" userFileName="XPOContact" designerFileName="XPOContact.Designer" className="XPOContact" virtualName="XPOContact">
+        <fields>
+          <generalXpObjectHasFields Id="db52eebf-53e3-4a57-984a-621718a099d4">
+            <field Id="37562088-07f9-4b9d-9b08-688d4f97b005" name="HomePhone" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="067ca7b6-58f6-4d10-ab9d-cb7d2601758f">
+            <field Id="448ea9f7-ffc2-483b-a8ff-741a1268a6c4" name="CellPhone" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="7488fa3e-6e1e-4492-9ff6-3b1765062eca">
+            <field Id="baddb0c2-ecf5-42e6-82e0-d6f375141fa7" name="CPCanText" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="dbe97d48-f0da-4407-94df-4bf9a15a8bdb">
+            <field Id="e2286e55-7d7b-484e-86e5-9796830f2e95" name="WorkPhone" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b5d9b347-eb47-4300-b425-8cc58cd57e03">
+            <field Id="3e31affa-cb64-405e-9c05-64e24fcf1107" name="WPCanText" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="021cacbb-f9b6-4b67-b28d-0cd2f0cf0665">
+            <field Id="0c99eb17-745b-47c7-9405-13dfeebb2e7f" name="OtherPhone" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a1cf7d18-ce9e-4a3f-b0aa-85f0569967a5">
+            <field Id="9ce563a2-7625-49a5-b395-4bd2809537e1" name="OPCantext" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e35426c6-e136-4d3e-8250-a7748754f13f">
+            <field Id="8fdb8115-47df-4980-91cc-d09642f86301" name="Email" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="91dd3c40-93b4-4adf-96d9-c40672aaac7f">
+            <field Id="f42ce200-2efb-4961-a4ba-c1c5b726676a" name="WorkEmail" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b0c2e22b-5cf0-4b0f-aa81-444f23631eea">
+            <field Id="5a32e251-4ea5-4e5f-9d34-36fb35048c13" name="OtherEmail" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="dc3b48fd-251a-4573-9851-b1777bf1425d">
+      <xpObject Id="167dfeed-77a4-456a-8734-039777bb6e87" name="XPOFacility" baseClass="XPObject" userFileName="XPOFacility" designerFileName="XPOFacility.Designer" className="XPOFacility" virtualName="XPOFacility">
+        <fields>
+          <generalXpObjectHasFields Id="4d0a3d9d-3330-4168-9913-48bc44afd509">
+            <field Id="ba3fb365-8292-4d10-97ff-0115af058c6c" name="FacilityName" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="0f9e845e-2f7d-4f7c-bd96-51fc7edd71bb">
+            <field Id="c3507bbf-b377-452d-8354-c971b0aeee04" name="Capacity" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="ebbdb26f-355e-480c-ab29-9a7f99bb321d">
+            <field Id="d6f07433-47f8-4290-a1e8-f3909c77477d" name="Lat" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="ba49d15c-e5d1-4db1-a50d-15cda4aebe2d">
+            <field Id="b4698c25-0ff6-44d1-87d8-8879eacc62b5" name="Lon" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="0fe144ab-c9f6-4c5d-a244-0da4ab862c5f">
+            <field Id="251f98ad-328d-4eb1-b2ff-10903b88b8ac" name="Tag" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f996e547-b70e-4824-a4de-551235d2ef1d">
+            <field Id="dc188b82-0427-453a-993c-c991612a7cb7" name="YearBuilt" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <saTargets>
+          <simpleAssociation Id="388ce1f7-ac27-4f53-a9fb-6e1fe266a165" sourceCollectionName="XPOGameRecords" name="XPOGameRecordReferencesXPOUniversityFacility" targetFieldName="Location">
+            <xpObjectMoniker Id="ccde8c23-5e29-4140-a4d9-5f4594df00e1" />
+          </simpleAssociation>
+          <simpleAssociation Id="517470f0-3c43-4b5f-a00e-69ed6b77bffb" sourceCollectionName="XPOTeams" name="XPOTeamReferencesXPOFacility" targetFieldName="Facility">
+            <xpObjectMoniker Id="69d3974f-9c47-4756-8a29-c7119edb9334" />
+          </simpleAssociation>
+          <simpleAssociation Id="80492e54-abc4-45d3-97eb-37417f9a3558" sourceCollectionName="XPOProTeams" name="XPOProTeamReferencesXPOFacility" targetFieldName="Facility">
+            <xpObjectMoniker Id="0e8212c0-06f6-48cc-8bfe-4b753c65ae58" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="f33b0e18-c6c8-4247-857e-5e3d5c08306f">
+            <collectionField Id="2d2913c5-4665-46b1-b617-0ccccc97d985" name="XPOGameRecords" />
+          </xpObjectHasCollectionFields>
+          <xpObjectHasCollectionFields Id="07adb907-6008-4673-9184-bb51f3b2fa87">
+            <collectionField Id="abd8a99e-17c1-46b0-b568-ba662ee7b231" name="XPOTeams" />
+          </xpObjectHasCollectionFields>
+          <xpObjectHasCollectionFields Id="bf35ecb9-a746-410c-8b36-227f654d5bc5">
+            <collectionField Id="180bdded-cd61-4895-b4a6-0b024aea92ca" name="XPOProTeams" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="4236cd1e-5ba0-42bf-8ba4-6736b820115b">
+      <xpObject Id="8548a76f-4675-47cd-a2f3-630a350bc177" name="XPOStaff" baseClass="XPObject" userFileName="XPOStaff" designerFileName="XPOStaff.Designer" className="XPOStaff" virtualName="XPOStaff" xMLDocComments="Staff administrating this sport">
+        <fields>
+          <generalXpObjectHasFields Id="ed3dd5fb-10cd-45f9-b287-2f990a7da056">
+            <field Id="65239514-88a7-44fe-bdeb-e839d87d9030" name="Sport" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="769f2333-c0d9-4be0-a470-20a3c1e240fa">
+            <field Id="ab4f0bda-151d-4b0f-befe-9fb44c0036a9" name="University" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="c08a4c17-4567-42a0-a53a-77b6d51696b1">
+            <field Id="42fd38a5-7e10-4a6e-bcbc-4ed1fbf9d045" name="Person" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="2a8c6ef1-63e4-4820-8458-7ea3b04ccb95">
+            <field Id="f2e610d2-c362-4b70-9959-199ce5809a70" name="Title" virtualColumnType="XPOStaffTitle" logicalType="XPOStaffTitle" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="44ed2031-d835-4e07-a754-7c5d62e97fc2">
+      <xpObject Id="728db730-0267-446b-b1a5-30ca485c6cc0" name="XPOStaffTitle" baseClass="XPObject" userFileName="XPOStaffTitle" designerFileName="XPOStaffTitle.Designer" className="XPOStaffTitle" virtualName="XPOStaffTitle">
+        <fields>
+          <generalXpObjectHasFields Id="0412401f-7065-452c-a068-fb6e23a37f13">
+            <field Id="88200cf7-091d-44e9-a0db-a1f1d4aa36ec" name="Title" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <saTargets>
+          <simpleAssociation Id="4d151682-6149-40e8-8f4f-c2215791e5c4" sourceCollectionName="XPOStaffs" name="XPOStaffReferencesXPOStaffTitle" targetFieldName="Title">
+            <xpObjectMoniker Id="8548a76f-4675-47cd-a2f3-630a350bc177" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="d734aa40-cbf6-4233-8aef-839f9f8a0483">
+            <collectionField Id="2473a32a-8ae2-44db-9772-269546c5385f" name="XPOStaffs" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="70721aed-ed49-474e-84ee-40dc05f476f2">
+      <xpObject Id="0d560b7d-5609-415a-9f57-d1c20528652c" name="XPOProFranchise" baseClass="XPObject" userFileName="XPOProFranchise" designerFileName="XPOProFranchise.Designer" className="XPOProFranchise" virtualName="XPOProFranchise">
+        <fields>
+          <generalXpObjectHasFields Id="e3b89418-51c4-4343-8e74-4bb77ff3ce67">
+            <field Id="6a2050f4-c5ce-4f77-be77-8eea1b45dc2c" name="Franchise" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="3269320a-6df9-4c00-b9b4-ce4081be6c7e">
+            <field Id="dedb061c-2f50-4e08-b1fa-4bc50c76161e" name="Division" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e81e57a8-8b1d-4368-adcc-b657072e5ebd">
+            <field Id="4b349da0-e9d2-4a2f-bf14-06011945c6e1" name="Sport" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="db02ca3c-1d6a-4139-a7f0-a6948f136bde">
+            <field Id="7e5a1060-1d3f-4f29-974a-87d390f1acdf" name="Tags" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <saTargets>
+          <simpleAssociation Id="55ec98a4-9404-442f-854c-78efe54faaa1" sourceCollectionName="XPOProFacilities" name="XPOProFacilityReferencesXPOFranchise" targetFieldName="Franchise">
+            <xpObjectMoniker Id="9909fff8-4cc0-4cd3-ba31-707e6964171f" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="5edbc006-73bf-4cba-9e61-67afd0f02ecb">
+            <collectionField Id="ad5226f9-cfc8-4309-9187-3d138e8f4d51" name="XPOProFacilities" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="5fc4c398-a0f7-4647-aa15-0e50d7e12dd7">
+      <xpObject Id="9909fff8-4cc0-4cd3-ba31-707e6964171f" name="XPOProFacility" baseClass="XPObject" userFileName="XPOProFacility" designerFileName="XPOProFacility.Designer" className="XPOProFacility" virtualName="XPOProFacility">
+        <fields>
+          <generalXpObjectHasFields Id="011b7d73-bd91-40d6-9f32-3708fd0f40f8">
+            <field Id="441aac6f-71be-438c-b35c-a12d939438c2" name="Name" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="5ffc6ed8-c19d-46f9-a73c-1bbbc1c49a59">
+            <field Id="f16bc780-9a39-4125-b39a-22453e75a099" name="Capacity" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="771de6f3-20d7-49dd-bc08-1af840c0f92a">
+            <field Id="9f7a65d7-1fcf-4070-ae08-ceb360dcf3c9" name="Lat" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="0122f1e1-92e0-4814-be8b-0e0d2fc4794a">
+            <field Id="f3b994f5-f8f7-426d-8246-b006f7271fcf" name="Lon" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="00ac217e-adcc-4e89-a50b-9ffb8ed04b31">
+            <field Id="f2495250-87e5-45ca-a7cd-1c5c0c80324a" name="Franchise" virtualColumnType="XPOProFranchise" logicalType="XPOProFranchise" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="15e76c32-8d40-4224-ac46-2b96248a82cb">
+      <xpObject Id="ccde8c23-5e29-4140-a4d9-5f4594df00e1" name="XPOGameRecord" baseClass="XPObject" userFileName="XPOGameRecord" designerFileName="XPOGameRecord.Designer" className="XPOGameRecord" virtualName="XPOGameRecord">
+        <fields>
+          <generalXpObjectHasFields Id="14fd4bd5-e484-4c8b-9fb2-481d887306d8">
+            <field Id="4e56b142-51a6-4a86-8aa8-c54a5ed04fe0" name="CollegeTeam" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="628b9c21-3cd6-4e40-adaf-d0b5e95fc703">
+            <field Id="9d4e8fd4-9c83-4e46-8f92-4188a980ef00" name="Year" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="7f88e3a1-5538-41a8-9fd5-ac14a38788b3">
+            <field Id="ca60223b-d090-4a60-bd37-46b756f2792d" name="Location" virtualColumnType="XPOFacility" logicalType="XPOFacility" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="2df31bdd-6b5b-41cb-82a1-01a7a391b901">
+            <field Id="74cdf9fc-8dee-4a76-98b0-c5d2ae5fe46c" name="WinLoss" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="de6f82e1-1625-4baa-bd2a-41c0234eed76">
+            <field Id="f40a19c8-e541-4901-aeec-90546e3b27bc" name="SelectedScore" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e3bd416c-b779-4ddd-b5cb-29be7f84d851">
+            <field Id="d4d77278-cc87-4037-aa68-58d957b23ccc" name="OponentScore" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="5d05c818-7319-4b13-a705-ae2792e2e30a">
+            <field Id="69d82866-1d0a-457f-af0c-35b997eae887" name="GameDate" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="61f3849f-c6ad-41df-a75e-40e27fd4a3fc">
+            <field Id="12d21097-c3b1-40fc-bd77-6127b8d37c20" name="GameNotes" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="60c51974-057a-41d9-a373-8da6eb6140e6">
+            <field Id="9236ac52-1918-4116-9845-4357408e98b0" name="Atendance" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="3c63dce0-3c2a-49d4-a1db-d69abb0fd8c8">
+      <xpObject Id="6e033c0e-74ba-4e1c-8257-f500a3ba0522" name="XPOTeamByYear" baseClass="XPObject" userFileName="XPOTeamByYear" designerFileName="XPOTeamByYear.Designer" className="XPOTeamByYear" virtualName="XPOTeamByYear">
+        <fields>
+          <generalXpObjectHasFields Id="75577473-0fc6-4700-80d9-b186fdfca2cb">
+            <field Id="ae6c6951-4cec-4e4e-8c4e-a6c52425261e" name="Year" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="140b345a-d463-489b-b25f-12d5bc34319c">
+            <field Id="0793227c-ffb7-4784-95d7-6df152f97ce0" name="Wins" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="de48ea37-5019-4521-875a-6d5c7e523447">
+            <field Id="d940f67f-cd18-44a2-94f1-0954bcc0cfd5" name="Losses" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="98aff671-f5f2-4132-8fb4-dfa41b064bec">
+            <field Id="136334fe-9eb6-4585-9571-5fe07ecbb5e7" name="Team" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="59680be4-0afe-441d-826c-675797b3792c">
+      <xpObject Id="b4662ed4-9f4f-4c3f-92c9-b9c1eba84772" name="XPOPlayers" baseClass="XPObject" userFileName="XPOPlayers" designerFileName="XPOPlayers.Designer" className="XPOPlayers" virtualName="XPOPlayers">
+        <fields>
+          <generalXpObjectHasFields Id="f0a836e2-9737-4ca6-a233-6274749b7c60">
+            <field Id="b80d2533-c53d-4832-a685-6043ed855949" name="Person" virtualColumnType="XPOPerson" logicalType="XPOPerson" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="39b97cad-7d75-41b0-97ef-7efe6675d852">
+            <field Id="1a0de608-761d-4d78-9bd2-74e46f0e62ba" name="Number" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="6e61b2b6-37f8-4673-b31a-7508d67494c0">
+      <xpObject Id="79ec685a-24d8-4023-9de0-754eeabe6dbd" name="XPOUnivFootball" baseClass="XPObject" userFileName="XPOUnivFootball" designerFileName="XPOUnivFootball.Designer" className="XPOUnivFootball" virtualName="XPOUnivFootball">
+        <fields>
+          <generalXpObjectHasFields Id="4b1c2bc1-55ab-44fd-bd77-259ddc1efda8">
+            <field Id="426712a4-c4ed-4376-bdb3-ea599e810c84" name="SurfaceTag" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="f1b82ded-0ba7-448f-ad2c-1752f350ef87">
+      <xpObject Id="1c927b8b-afda-4ed4-b283-8c86424d2d9a" name="XPOUnivBasketBall" baseClass="XPObject" userFileName="XPOUnivBasketBall" designerFileName="XPOUnivBasketBall.Designer" className="XPOUnivBasketBall" virtualName="XPOUnivBasketBall">
+        <fields>
+          <generalXpObjectHasFields Id="ec9c1ae9-4169-4586-8922-5580b02d73b6">
+            <field Id="bdaa5cc4-a26a-4b31-9c62-4947a53b3552" name="temp" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="e22cd77a-91bf-4376-baaa-1beb5f1f674b">
+      <xpObject Id="8c32d8c7-70dd-4e1e-81e1-d58acff98e65" name="XPOUnivBaseBall" baseClass="XPObject" userFileName="XPOUnivBaseBall" designerFileName="XPOUnivBaseBall.Designer" className="XPOUnivBaseBall" virtualName="XPOUnivBaseBall">
+        <fields>
+          <generalXpObjectHasFields Id="638285fb-dc61-483a-8b19-2873400af487">
+            <field Id="894ed77f-dfb9-47bc-a8ef-427a9a9e4bd5" name="temp" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="2045a64d-bfa3-48b2-91f8-3daa4d005180">
+      <xpObject Id="69d3974f-9c47-4756-8a29-c7119edb9334" name="XPOCollegeTeam" baseClass="XPObject" userFileName="XPOCollegeTeam" designerFileName="XPOCollegeTeam.Designer" className="XPOCollegeTeam" virtualName="XPOCollegeTeam">
+        <fields>
+          <generalXpObjectHasFields Id="2bdf7741-adc1-4c79-af8e-137ebce19c42">
+            <field Id="3a4b5405-4e9d-4970-91e8-5df1cb6a5810" name="TeamName" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="50" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="3670cf6e-9aca-466a-b149-a77d4a730e9b">
+            <field Id="e3936e31-a6a1-471d-b84f-12203f87ed51" name="Facility" virtualColumnType="XPOFacility" logicalType="XPOFacility" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="c0bdc96a-92b6-4495-aa12-0d3938c6f193">
+            <field Id="2bd26e21-9b22-4d75-9f3d-306f4dda7e96" name="SportCode" columnType="TimeSpan" virtualColumnType="XPOSportsCode" logicalType="XPOSportsCode" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="4cd5062a-dec1-4156-ae96-c923e364afcb">
+            <field Id="92353c6c-e06b-4f39-ae4c-c6b10153af19" name="Owner" virtualColumnType="XPOUniversity" logicalType="XPOUniversity" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="470d8db6-b8e1-4a4a-9a90-ad3fbb3bbc40">
+            <field Id="a2f2c342-fd3a-4d46-a693-3f4a72c2d30d" name="Picture" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="250" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="fe50d046-070c-41df-a540-e644a8de607d">
+            <field Id="1eb58094-edaa-4fbf-97f0-6ade93e505f4" name="Logo" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="250" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e93217ec-d04b-4f49-b2a8-311229672f5a">
+            <field Id="ed525da7-ad12-4279-8b37-d238c2f3e242" name="Conference" virtualColumnType="XPOColConference" logicalType="XPOColConference" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="05e2002d-1727-4da5-b96a-9c4b3f981b3c">
+      <xpObject Id="13ad1159-4c56-4cd9-8777-ef86f94058bc" name="XPOParticipant" baseClass="XPObject" userFileName="XPOParticipant" designerFileName="XPOParticipant.Designer" className="XPOParticipant" virtualName="XPOParticipant">
+        <fields>
+          <generalXpObjectHasFields Id="da21ac29-f9a1-492e-b2de-9845aeb4a755">
+            <field Id="4cb3dc55-7f86-4e31-80d0-1089d43f2158" name="PersonCategoryID" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="10" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="811620aa-e38e-43c7-8d21-21834cab0cb0">
+            <field Id="0193f446-9f22-4ca6-a3fd-98290ee0cc61" name="Role" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="30" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="44bce2c6-4784-4798-9d5d-423b94ec076f">
+            <field Id="ae822fdf-ac57-4f0f-9686-ec9d0243037d" name="Description" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="1024" />
+          </generalXpObjectHasFields>
+        </fields>
+        <saTargets>
+          <simpleAssociation Id="b0c432db-3985-4a82-9c4d-e224df98c1fe" sourceCollectionName="XPOPlayerFootballs" name="XPOPlayerFootballReferencesXPOParticipants" targetFieldName="Participants">
+            <xpObjectMoniker Id="7fbc1e34-5fd6-41f1-bdd1-a887c9717081" />
+          </simpleAssociation>
+          <simpleAssociation Id="6f7ba970-4dd1-4221-8dae-0612c95e5a5c" sourceCollectionName="XPORefereeFootballs" name="XPORefereeFootballReferencesXPOParticipants" targetFieldName="Participants">
+            <xpObjectMoniker Id="030cfe02-ddf6-4780-af49-1184cba0b6f2" />
+          </simpleAssociation>
+          <simpleAssociation Id="1f5783de-77e5-4c0d-9b4b-e2d9b5828955" sourceCollectionName="XPOFootballCoaches" name="XPOFootballCoachReferencesXPOParticipants" targetFieldName="Participants">
+            <xpObjectMoniker Id="88ddd9fe-8401-46fb-9e2c-492f99e47a48" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="71fb9820-d635-4d44-904d-c1f79428be57">
+            <collectionField Id="601cc440-0020-4a88-94a0-4dad3a49738d" name="XPOPlayerFootballs" />
+          </xpObjectHasCollectionFields>
+          <xpObjectHasCollectionFields Id="17cb9a45-9d16-4ade-9198-6f709d6625c7">
+            <collectionField Id="4f8d36c6-0310-4913-b148-af69cb838bf9" name="XPORefereeFootballs" />
+          </xpObjectHasCollectionFields>
+          <xpObjectHasCollectionFields Id="7533a42d-3f20-40c0-afb9-6bb8124bbe1f">
+            <collectionField Id="c784117f-d86f-4d79-9678-31f3359bea70" name="XPOFootballCoaches" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="ed35de91-8a41-4ae8-8d8e-b54f23594b6d">
+      <xpObject Id="88ddd9fe-8401-46fb-9e2c-492f99e47a48" name="XPOFBCoach" baseClass="XPObject" userFileName="XPOFBCoach" designerFileName="XPOFBCoach.Designer" className="XPOFBCoach" virtualName="XPOFBCoach" xMLDocComments="Football Coach">
+        <fields>
+          <generalXpObjectHasFields Id="225ed1f5-4675-4584-bd5d-ae3e1c233614">
+            <field Id="9fc35ecc-ea91-444b-8700-422a9b4606a9" name="CoachID" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="ee01563f-46ca-4c07-8bec-cd32d19296c7">
+            <field Id="7ec82de2-eefc-4341-9fb5-f003ecda5c88" name="Description" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="30" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="3054cdb0-fa4b-4fd6-9453-932e79fd94cf">
+            <field Id="2796b85d-ed42-4027-aba5-acdfbd0554d6" name="Resposibilities" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="91971b9d-7b45-4aa6-a7ea-44ce2065915e">
+            <field Id="a11b4822-5c1a-4b31-bee7-0ec272593462" name="PersonCategoryID" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="dc040dee-85eb-4647-a062-ede5d87ff0e6">
+            <field Id="9271a179-835c-474a-a454-9c4ce7cde69b" name="Participants" virtualColumnType="XPOParticipant" logicalType="XPOParticipant" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="c9b2ebcb-a884-436d-9d72-e85092e36ad4">
+      <xpObject Id="0f4255c3-e1cf-4dec-9895-a859e7a898be" name="XPOSportsCode" baseClass="XPObject" userFileName="XPOSportsCode" designerFileName="XPOSportsCode.Designer" className="XPOSportsCode" virtualName="XPOSportsCode">
+        <fields>
+          <generalXpObjectHasFields Id="45a63ba3-3a79-4ff0-b358-0ca7a79db03c">
+            <field Id="af58afc7-c4aa-49e7-9e10-550e58a17b34" name="SportCode" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="10" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a69f8677-7248-43ce-a892-dd1008a6fbf0">
+            <field Id="1debdf3b-b127-4930-b5b4-8485632b757b" name="Description" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="d09aedbb-a8f4-441e-ad72-1f4348de11a1">
+            <field Id="a5873c28-bc9b-4eac-9a2e-fc5cc30a4401" name="SportType" virtualColumnType="XPOSportType" logicalType="XPOSportType" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <indexes>
+          <xpObjectHasIndexes Id="c8626d1c-9f0d-4986-a4ba-5ffed10d45ef">
+            <index Id="f52d7b12-65fc-4cc8-8a54-2e3cc8ffccba" name="IDXSportCode">
+              <fieldsInIndex>
+                <indexReferencesFields Id="4f57f727-231f-42b0-b5f9-7088182e5adc">
+                  <fieldMoniker Id="af58afc7-c4aa-49e7-9e10-550e58a17b34" />
+                </indexReferencesFields>
+              </fieldsInIndex>
+            </index>
+          </xpObjectHasIndexes>
+        </indexes>
+        <saTargets>
+          <simpleAssociation Id="e5beede0-203f-4d4a-b9f4-569c92cc1922" sourceCollectionName="XPOTeams" name="XPOTeamReferencesXPOAllSports" targetFieldName="SportCode">
+            <xpObjectMoniker Id="69d3974f-9c47-4756-8a29-c7119edb9334" />
+          </simpleAssociation>
+          <simpleAssociation Id="567fa9a3-e570-4ac8-a741-8364a0b57f1a" sourceCollectionName="XPOProTeams" name="XPOProTeamReferencesXPOSportsCode" targetFieldName="SportsCode">
+            <xpObjectMoniker Id="0e8212c0-06f6-48cc-8bfe-4b753c65ae58" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="3b62f642-18f8-4813-9502-8087ea8bb68f">
+            <collectionField Id="f8d8c0b9-9d24-46b6-b5b6-302b6f9a7f72" name="XPOTeams" />
+          </xpObjectHasCollectionFields>
+          <xpObjectHasCollectionFields Id="ab0b13fc-2879-4e16-bcd3-928d577630ca">
+            <collectionField Id="88027c66-fd2c-4f80-9824-a3d06a24f397" name="XPOProTeams" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="9fd3fb82-9387-45bd-9921-5a3a41c27f39">
+      <xpObject Id="7fbc1e34-5fd6-41f1-bdd1-a887c9717081" name="XPOPlayer" baseClass="XPObject" userFileName="XPOPlayer" designerFileName="XPOPlayer.Designer" className="XPOPlayer" virtualName="XPOPlayer">
+        <fields>
+          <generalXpObjectHasFields Id="fd4f5f44-0a90-49b8-8594-c7bca6faee99">
+            <field Id="d476f18f-7116-4ba0-a770-d5dd9f5fccad" name="PlayerID" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="041d8ebf-d33a-4484-88f7-6deb00a8c8ed">
+            <field Id="62aac2c7-9a54-4d9a-93f6-0939b27d34c2" name="Description" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="30" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="133bad16-0531-484c-9d2e-c711777052d7">
+            <field Id="619da6ae-89d7-432d-b111-ad57ab0f34ee" name="OffDef" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="c3744656-48dc-4d3d-b290-eccbb810fc2e">
+            <field Id="5338b59c-3da2-4b4c-b500-f6f9230efa92" name="Responsibilities" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="137a45f8-862b-4751-9818-5c579c99af6e">
+            <field Id="00625bbe-b889-42a4-a997-88cd0e39d97c" name="Participants" virtualColumnType="XPOParticipant" logicalType="XPOParticipant" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="8128c503-2fdb-4b1f-9df4-bacc51913edf">
+      <xpObject Id="030cfe02-ddf6-4780-af49-1184cba0b6f2" name="XPOFBReferee" baseClass="XPObject" userFileName="XPOFBReferee" designerFileName="XPOFBReferee.Designer" className="XPOFBReferee" virtualName="XPOFBReferee">
+        <fields>
+          <generalXpObjectHasFields Id="816490f9-dab8-43a1-865c-dcba2cf41097">
+            <field Id="2ccfe49b-ebec-4e23-bfb2-47e5b3131463" name="RefereeID" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e044a277-95bc-42a2-b49f-c8fe6bd7abf5">
+            <field Id="6b8934cd-ea63-45f0-82be-4efd0b145c38" name="Description" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="30" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b6d5c6cb-c6ba-458b-b8a7-8f1848be3ffe">
+            <field Id="1160c7f3-12fc-46bc-8a69-f07d554fe2d0" name="FieldPosition" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e6e50a6c-2755-4681-94ed-5ba760f15653">
+            <field Id="cec4b649-586d-49f5-9761-34149b50846e" name="Responsibilities" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="0875d0af-c055-4b35-ae37-3c1e67dc83dd">
+            <field Id="5e6c21aa-c296-4416-812a-2c38d8454552" name="RunPlays" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6861e624-b4c2-44cb-82b2-79c3fa1ff02f">
+            <field Id="f4ae61ed-888d-4799-b07f-094918042030" name="PassPlays" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f0726bff-9740-42c3-a938-976b43fca142">
+            <field Id="653c9058-a213-4b1c-8337-f3106ac1117d" name="SpecialTeams" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b163f52e-18ca-48e3-ba3c-ed2d62f1715a">
+            <field Id="6e93ad6b-2175-43bc-b759-c4e5f7e0335a" name="Participants" virtualColumnType="XPOParticipant" logicalType="XPOParticipant" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="8a18fb39-b014-4d80-8011-ae01cf0d67d0">
+      <xpObject Id="e5725a6a-2ff1-49a1-b7c8-f9605feb57fc" name="XPOSportType" baseClass="XPObject" userFileName="XPOSportType" designerFileName="XPOSportType.Designer" className="XPOSportType" virtualName="XPOSportType" xMLDocComments="Pro or Amature">
+        <fields>
+          <generalXpObjectHasFields Id="bf677ab2-239d-4570-8628-4b0e3d23764e">
+            <field Id="024c3e11-2dee-4241-abac-7e0a841d368c" name="Type" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="6" xMLDocComments="Pro or College" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f93feebe-993b-42c6-95c1-6334bd9eb232">
+            <field Id="9ebbe6ff-8c93-4684-b625-ce30a4b8d9c9" name="Description" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <indexes>
+          <xpObjectHasIndexes Id="a4cc82e4-1c67-44df-a3bd-93c7ab728696">
+            <index Id="b9ac34e4-67ed-4ec5-baa0-c58db46019c7" name="IDXType">
+              <fieldsInIndex>
+                <indexReferencesFields Id="6b7b9ea3-006d-49db-8241-117440fa3365">
+                  <fieldMoniker Id="024c3e11-2dee-4241-abac-7e0a841d368c" />
+                </indexReferencesFields>
+              </fieldsInIndex>
+            </index>
+          </xpObjectHasIndexes>
+        </indexes>
+        <saTargets>
+          <simpleAssociation Id="1fa3a958-9662-4eb3-a43c-aaa2df11f29e" sourceCollectionName="XPOAllSportsCollection" name="XPOAllSportsReferencesXPOSportType" targetFieldName="SportType">
+            <xpObjectMoniker Id="0f4255c3-e1cf-4dec-9895-a859e7a898be" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="37cfcb74-9ae6-4c8d-b346-4e539f055b1d">
+            <collectionField Id="1e0afe32-0ada-42b1-8ea4-c43976a87b51" name="XPOAllSportsCollection" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="c667c0f2-70bc-4d5c-894c-980dffe692d3">
+      <xpObject Id="078cfdc4-0b17-4ab6-b46f-dfdb12a8d202" name="XPOUniversity" baseClass="XPObject" userFileName="XPOUniversity" designerFileName="XPOUniversity.Designer" className="XPOUniversity" virtualName="XPOUniversity">
+        <fields>
+          <generalXpObjectHasFields Id="7de6c6cb-1389-49f9-a845-4cd400c7c935">
+            <field Id="6b38cd2f-e92b-4260-8e8f-3be397de792c" name="Name" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="50" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="3f8a7e3e-ee32-4187-8353-0db1534b0d17">
+            <field Id="149caec9-b5f2-4016-a38c-59bfb950c726" name="Address" virtualColumnType="XPOAddress" logicalType="XPOAddress" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a5152284-968f-4cef-9d6a-d6b42369edfa">
+            <field Id="7fc14d42-6549-45c6-930a-26911a713987" name="Information" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="4096" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="62429299-9016-4a53-b18c-99ec9b0ca383">
+            <field Id="c64b5acd-1a4d-4cf9-b4df-47f54b0f1227" name="Picture" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="50" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="c88e4a4d-1bf2-4797-8c97-5d3744c884fd">
+            <field Id="a5793f83-60ad-469b-9f30-221e87575883" name="Logo" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="200" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b46b9a76-191e-47d6-8e50-1c60e364e743">
+            <field Id="2e7013e3-9891-45cd-af1a-7264c86064e6" name="RecNO" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a3c169ba-796d-44b5-abb3-49f1c15d43a8">
+            <field Id="fb3e73a4-3b28-4f46-9630-522f2a6907e2" name="DivID" virtualColumnType="XPOColConfDiv" logicalType="XPOColConfDiv" delayedUpdateModifiedOnly="false" xMLDocComments="Division ID" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="2783d8cb-0608-4c56-9aea-f89faaad9c4a">
+            <field Id="03202729-ca2e-4bb5-ba01-0593d393b9e9" name="TeamColor1" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="1ed60c31-3045-4759-9369-aafa6726fc1b">
+            <field Id="aa85fc82-da30-4511-9c26-3dd1fd27bf7c" name="TeamColor2" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <saTargets>
+          <simpleAssociation Id="8b4558cb-e0db-4681-bc91-8e074138ba4f" sourceCollectionName="XPOCollegeTeams" name="XPOCollegeTeamReferencesXPOUniversity" targetFieldName="Owner">
+            <xpObjectMoniker Id="69d3974f-9c47-4756-8a29-c7119edb9334" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="204196f6-c794-46af-83c8-d7941ea379ac">
+            <collectionField Id="738aa0ba-c13b-49a7-9d44-dce90e7ad94b" name="XPOCollegeTeams" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="f9b4aff9-b187-49f8-a88b-bc2c5e61bc46">
+      <xpObject Id="25d0d021-887e-4377-b158-8ab281a9f2cb" name="XPOMunicipality" baseClass="XPObject" userFileName="XPOMunicipality" designerFileName="XPOMunicipality.Designer" className="XPOMunicipality" virtualName="XPOMunicipality">
+        <fields>
+          <generalXpObjectHasFields Id="e3ba1098-6232-4d40-bfd8-04f29d176857">
+            <field Id="c37d703c-5afb-48e9-b3ab-cf7eb5d38da1" name="Name" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="50" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="8edd5aa8-9a14-4da1-93dd-78228575ef36">
+            <field Id="185eb3a3-7f8b-436f-b66d-667ba60b0f41" name="Address" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b34b5b4b-8652-49e1-bdb7-b9d3faaef4af">
+            <field Id="358d126c-8f5c-4987-a785-c29ff80ed2fd" name="Information" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="4096" />
+          </generalXpObjectHasFields>
+        </fields>
+        <saTargets>
+          <simpleAssociation Id="09242445-6d23-4038-ad39-82a1471286b2" sourceCollectionName="XPOProTeams" name="XPOProTeamReferencesXPOMunicipality" targetFieldName="Owner">
+            <xpObjectMoniker Id="0e8212c0-06f6-48cc-8bfe-4b753c65ae58" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="e3609ef5-1cb5-46e7-8790-4b893aff5113">
+            <collectionField Id="73e64294-a341-4c11-a680-e17787911a76" name="XPOProTeams" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="cb6b6841-a3e8-4d33-8855-9bfe338868e3">
+      <xpObject Id="0e8212c0-06f6-48cc-8bfe-4b753c65ae58" name="XPOProTeam" baseClass="XPObject" userFileName="XPOProTeam" designerFileName="XPOProTeam.Designer" className="XPOProTeam" virtualName="XPOProTeam">
+        <fields>
+          <generalXpObjectHasFields Id="f2f03db5-d3e7-4cd1-8863-3bd8f7b0cc03">
+            <field Id="15d1e943-de90-4030-afd2-c0bdb1b09621" name="TeamName" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="50" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="9a57686d-7afa-44dd-9a12-068b0e20c4f8">
+            <field Id="ffcc015b-c672-4d7d-bffe-8f00744e7bbf" name="Facility" virtualColumnType="XPOFacility" logicalType="XPOFacility" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="4bb9421b-bff2-4b39-a5bc-f3f3253eec94">
+            <field Id="8c4b7f6e-e5b2-4771-a7a5-0682a231b9a2" name="SportsCode" virtualColumnType="XPOSportsCode" logicalType="XPOSportsCode" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6437ab6e-4b4e-418b-ac9f-d712af79065a">
+            <field Id="3d53c718-fc2c-4010-a392-4f3204214e12" name="Owner" virtualColumnType="XPOMunicipality" logicalType="XPOMunicipality" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="239df255-e81a-4fad-a4fe-48adeed373fa">
+            <field Id="29a1bdab-eb82-4266-b5e3-fa0d16f5b3e7" name="Picture" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="250" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="9c66df86-d922-418a-93ba-900648901763">
+            <field Id="796c658d-f5e2-4e7d-bd88-36419f08e6d4" name="Logo" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="250" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="e2978f25-6cc9-4d29-b6bc-17f856f7f962">
+      <xpObject Id="2fe728be-516e-483a-b0c5-55b3691cd0ca" name="XPOColConfGroup" baseClass="XPObject" userFileName="XPOColConfGroup" designerFileName="XPOColConfGroup.Designer" className="XPOColConfGroup" virtualName="XPOColConfGroup" xMLDocComments="College conference Groups">
+        <fields>
+          <generalXpObjectHasFields Id="19c87c22-5a00-4eb7-bbfe-dfa9b3b0868a">
+            <field Id="9ddc193b-b077-42f7-b0f3-d93431697db9" name="GroupID" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="6" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="44a2a1ef-af2f-4a4f-8e7c-d45dfc558457">
+            <field Id="b4786ff5-ccd8-4428-acd1-57deb8e05ab9" name="GroupName" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="60" />
+          </generalXpObjectHasFields>
+        </fields>
+        <indexes>
+          <xpObjectHasIndexes Id="edfded3e-985c-4775-8022-bd88cf956272">
+            <index Id="b62196ed-3771-4b8e-b0a4-3011446ac7f7" name="IDXGroupID">
+              <fieldsInIndex>
+                <indexReferencesFields Id="0da28025-d7e4-4e91-82b5-2b46116b7ed5">
+                  <fieldMoniker Id="9ddc193b-b077-42f7-b0f3-d93431697db9" />
+                </indexReferencesFields>
+              </fieldsInIndex>
+            </index>
+          </xpObjectHasIndexes>
+        </indexes>
+        <saTargets>
+          <simpleAssociation Id="86dc0ea7-1be5-4761-ad3f-06a589018c2d" sourceCollectionName="XPOCollConferencesCollection" name="XPOCollConferencesReferencesXPOColConfGroup" targetFieldName="GroupID">
+            <xpObjectMoniker Id="7a697ca0-3b40-49b3-b998-a94e94f6ce03" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="a71f1f94-5bea-4c39-a9de-48efb7a3de73">
+            <collectionField Id="29ea0d6b-668d-4bd7-8d62-c6162f269f08" name="XPOCollConferencesCollection" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="d869daa9-1189-4f9e-af78-69a689cb1cf6">
+      <xpObject Id="7a697ca0-3b40-49b3-b998-a94e94f6ce03" name="XPOColConference" baseClass="XPObject" userFileName="XPOColConference" designerFileName="XPOColConference.Designer" className="XPOColConference" virtualName="XPOColConference">
+        <fields>
+          <generalXpObjectHasFields Id="2be208c2-d376-4b2f-8aa5-2f786e3fb77b">
+            <field Id="21dcb9b7-41b6-4b58-8751-b5077d1b240b" name="CodeID" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="60" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="1f6ddd86-113d-4bd4-9399-b02221408f07">
+            <field Id="bc74ccdd-ff10-4889-bb1e-11dbc9b197f6" name="ConferenceName" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="60" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="2c41be4f-ae0c-4555-b1ce-43445e98000d">
+            <field Id="85089188-aa84-45a6-9954-4378724125e9" name="GroupID" virtualColumnType="XPOColConfGroup" logicalType="XPOColConfGroup" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <indexes>
+          <xpObjectHasIndexes Id="f4ea52ed-a067-4367-90ab-85cd548dade9">
+            <index Id="c0a15d41-af33-49c5-8d90-f6b3053b9f97" name="IDXCodeID">
+              <fieldsInIndex>
+                <indexReferencesFields Id="756be83e-1911-4d0c-8b5a-f1d060ca3752">
+                  <fieldMoniker Id="21dcb9b7-41b6-4b58-8751-b5077d1b240b" />
+                </indexReferencesFields>
+              </fieldsInIndex>
+            </index>
+          </xpObjectHasIndexes>
+        </indexes>
+        <saTargets>
+          <simpleAssociation Id="0426929f-6347-4c26-b275-b3de005ac503" sourceCollectionName="XPOColConfDivs" name="XPOColConfDivReferencesXPOCollConferences" targetFieldName="CodeID">
+            <xpObjectMoniker Id="d16529c6-692b-4793-98ab-9f53d9c75089" />
+          </simpleAssociation>
+          <simpleAssociation Id="f0b83f4d-3fa7-4c9a-966e-0bdc6acae333" sourceCollectionName="XPOCollegeTeams" name="XPOCollegeTeamReferencesXPOColConference" targetFieldName="Conference">
+            <xpObjectMoniker Id="69d3974f-9c47-4756-8a29-c7119edb9334" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="1d873ae8-d370-4359-b0c7-ec8fcc95c36a">
+            <collectionField Id="901f78c2-3b3a-414f-98f6-75927e291c5e" name="XPOColConfDivs" />
+          </xpObjectHasCollectionFields>
+          <xpObjectHasCollectionFields Id="6443ce60-e368-4766-b171-9795de952496">
+            <collectionField Id="0f264714-3e50-405f-b32a-cb92ab07b020" name="XPOCollegeTeams" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="c38265ba-a42b-491b-a243-eddd18e480de">
+      <xpObject Id="d16529c6-692b-4793-98ab-9f53d9c75089" name="XPOColConfDiv" baseClass="XPObject" userFileName="XPOColConfDiv" designerFileName="XPOColConfDiv.Designer" className="XPOColConfDiv" virtualName="XPOColConfDiv">
+        <fields>
+          <generalXpObjectHasFields Id="9e0cf439-0181-482e-ba64-eb487ed7d0ce">
+            <field Id="8a4c95b2-aad2-4656-9670-b14d82993413" name="DivID" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="6" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="8c292689-d54e-47af-9a26-75b8c0eb9358">
+            <field Id="23f6a73c-9779-4fd4-8c1d-9da6b8f8d991" name="Description" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="160" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6df4edde-43f2-4cb0-b6e6-5edda5aadc91">
+            <field Id="28ceceba-b524-450c-8da6-6e930d097002" name="CodeID" virtualColumnType="XPOColConference" logicalType="XPOColConference" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <indexes>
+          <xpObjectHasIndexes Id="d496a0e4-23ba-4317-a33b-359bb6e8bee7">
+            <index Id="32e9df22-eb4c-47aa-97b0-de6b7fb48f83" name="IDXDivID">
+              <fieldsInIndex>
+                <indexReferencesFields Id="a4f03f80-3c98-466f-a486-18d67dff1409">
+                  <fieldMoniker Id="8a4c95b2-aad2-4656-9670-b14d82993413" />
+                </indexReferencesFields>
+              </fieldsInIndex>
+            </index>
+          </xpObjectHasIndexes>
+        </indexes>
+        <saTargets>
+          <simpleAssociation Id="7caf4dfd-7674-4ef5-8e71-30b49de39485" sourceCollectionName="XPOUniversities" name="XPOUniversityReferencesXPOColConfDiv" targetFieldName="DivID">
+            <xpObjectMoniker Id="078cfdc4-0b17-4ab6-b46f-dfdb12a8d202" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="66433401-2dec-46b5-9c17-bbe7aa349e7f">
+            <collectionField Id="357b0864-f743-43da-9629-9b12f06b5410" name="XPOUniversities" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+  </classes>
+  <userComments>
+    <dataBaseObjectModelHasUserComments Id="361434b7-8b95-4252-8fc7-1644bddbeef1">
+      <userComment Id="d95abfbb-121a-4487-a273-ba7a6757bb43" text="Abstract fields for all tables">
+        <generalXpObjects>
+          <userCommentReferencesGeneralXpObjects Id="d68298d1-27e3-4998-a23e-3c9f73a35009">
+            <xpObjectMoniker Id="876ede08-ec1a-46e6-8991-172157450419" />
+          </userCommentReferencesGeneralXpObjects>
+        </generalXpObjects>
+      </userComment>
+    </dataBaseObjectModelHasUserComments>
+    <dataBaseObjectModelHasUserComments Id="1ce4d2c2-4a09-4164-9c8d-2d481c784df6">
+      <userComment Id="90e396da-bcc7-4bf5-a0fc-7e9017451dd7" text="College, Pro, Olympic">
+        <generalXpObjects>
+          <userCommentReferencesGeneralXpObjects Id="71e13ac7-51b6-4846-b39d-132902c319eb">
+            <xpObjectMoniker Id="e5725a6a-2ff1-49a1-b7c8-f9605feb57fc" />
+          </userCommentReferencesGeneralXpObjects>
+        </generalXpObjects>
+      </userComment>
+    </dataBaseObjectModelHasUserComments>
+    <dataBaseObjectModelHasUserComments Id="b4926ed4-5016-4cd4-a280-8c1b054c2476">
+      <userComment Id="15ae43bc-a5a3-4511-8bc0-260125be4805" text="Pro Teams, all sports">
+        <generalXpObjects>
+          <userCommentReferencesGeneralXpObjects Id="0d81494a-1343-4406-a219-170f1837f2e9">
+            <xpObjectMoniker Id="0d560b7d-5609-415a-9f57-d1c20528652c" />
+          </userCommentReferencesGeneralXpObjects>
+        </generalXpObjects>
+      </userComment>
+    </dataBaseObjectModelHasUserComments>
+    <dataBaseObjectModelHasUserComments Id="98ad689f-b6ab-4fce-acf9-ae0c26822d70">
+      <userComment Id="977e7f5d-dc0e-4b17-aee8-cbea8bce167c" text="Stadium or Facality name">
+        <generalXpObjects>
+          <userCommentReferencesGeneralXpObjects Id="5120a79f-4d6e-41ab-97ec-b98c41445f69">
+            <xpObjectMoniker Id="9909fff8-4cc0-4cd3-ba31-707e6964171f" />
+          </userCommentReferencesGeneralXpObjects>
+        </generalXpObjects>
+      </userComment>
+    </dataBaseObjectModelHasUserComments>
+    <dataBaseObjectModelHasUserComments Id="cf78fc52-6415-41f1-a499-4a4c3bf8febe">
+      <userComment Id="ae377fe9-a559-48de-9fc7-5e50bead6f91" text="Individual games per year">
+        <generalXpObjects>
+          <userCommentReferencesGeneralXpObjects Id="ee45e96f-49c9-4acf-a440-a3baab90e1df">
+            <xpObjectMoniker Id="ccde8c23-5e29-4140-a4d9-5f4594df00e1" />
+          </userCommentReferencesGeneralXpObjects>
+        </generalXpObjects>
+      </userComment>
+    </dataBaseObjectModelHasUserComments>
+    <dataBaseObjectModelHasUserComments Id="2299051d-8e64-4c36-8db4-cb7706e66b9a">
+      <userComment Id="b05265a9-1a75-451e-b15a-9e1fef266d69" text="CFB PFB CBB PBB Etc">
+        <generalXpObjects>
+          <userCommentReferencesGeneralXpObjects Id="0d48ed94-3e1f-4ce5-a8c8-aab8218ba30c">
+            <xpObjectMoniker Id="0f4255c3-e1cf-4dec-9895-a859e7a898be" />
+          </userCommentReferencesGeneralXpObjects>
+        </generalXpObjects>
+      </userComment>
+    </dataBaseObjectModelHasUserComments>
+  </userComments>
+</dataBaseObjectModel>

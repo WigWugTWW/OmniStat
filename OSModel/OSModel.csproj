@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B1084CB-F9FD-45C4-9393-BC87848BEAED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OSModel</RootNamespace>
+    <AssemblyName>OSModel</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OSDataModelCode\ConnectionHelper.cs" />
+    <Compile Include="OSDataModelCode\XPOAddress.cs" />
+    <Compile Include="OSDataModelCode\XPOAddress.Designer.cs">
+      <DependentUpon>XPOAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOBase.cs" />
+    <Compile Include="OSDataModelCode\XPOBase.Designer.cs">
+      <DependentUpon>XPOBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOColConfDiv.cs" />
+    <Compile Include="OSDataModelCode\XPOColConfDiv.Designer.cs">
+      <DependentUpon>XPOColConfDiv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOColConference.cs" />
+    <Compile Include="OSDataModelCode\XPOColConference.Designer.cs">
+      <DependentUpon>XPOColConference.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOColConfGroup.cs" />
+    <Compile Include="OSDataModelCode\XPOColConfGroup.Designer.cs">
+      <DependentUpon>XPOColConfGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOCollegeTeam.cs" />
+    <Compile Include="OSDataModelCode\XPOCollegeTeam.Designer.cs">
+      <DependentUpon>XPOCollegeTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOContact.cs" />
+    <Compile Include="OSDataModelCode\XPOContact.Designer.cs">
+      <DependentUpon>XPOContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOFacility.cs" />
+    <Compile Include="OSDataModelCode\XPOFacility.Designer.cs">
+      <DependentUpon>XPOFacility.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOFBCoach.cs" />
+    <Compile Include="OSDataModelCode\XPOFBCoach.Designer.cs">
+      <DependentUpon>XPOFBCoach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOFBReferee.cs" />
+    <Compile Include="OSDataModelCode\XPOFBReferee.Designer.cs">
+      <DependentUpon>XPOFBReferee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOGameRecord.cs" />
+    <Compile Include="OSDataModelCode\XPOGameRecord.Designer.cs">
+      <DependentUpon>XPOGameRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOMunicipality.cs" />
+    <Compile Include="OSDataModelCode\XPOMunicipality.Designer.cs">
+      <DependentUpon>XPOMunicipality.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOParticipant.cs" />
+    <Compile Include="OSDataModelCode\XPOParticipant.Designer.cs">
+      <DependentUpon>XPOParticipant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOPerson.cs" />
+    <Compile Include="OSDataModelCode\XPOPerson.Designer.cs">
+      <DependentUpon>XPOPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOPlayer.cs" />
+    <Compile Include="OSDataModelCode\XPOPlayer.Designer.cs">
+      <DependentUpon>XPOPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOPlayers.cs" />
+    <Compile Include="OSDataModelCode\XPOPlayers.Designer.cs">
+      <DependentUpon>XPOPlayers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOProFacility.cs" />
+    <Compile Include="OSDataModelCode\XPOProFacility.Designer.cs">
+      <DependentUpon>XPOProFacility.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOProFranchise.cs" />
+    <Compile Include="OSDataModelCode\XPOProFranchise.Designer.cs">
+      <DependentUpon>XPOProFranchise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOProTeam.cs" />
+    <Compile Include="OSDataModelCode\XPOProTeam.Designer.cs">
+      <DependentUpon>XPOProTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOSportsCode.cs" />
+    <Compile Include="OSDataModelCode\XPOSportsCode.Designer.cs">
+      <DependentUpon>XPOSportsCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOSportType.cs" />
+    <Compile Include="OSDataModelCode\XPOSportType.Designer.cs">
+      <DependentUpon>XPOSportType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOStaff.cs" />
+    <Compile Include="OSDataModelCode\XPOStaff.Designer.cs">
+      <DependentUpon>XPOStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOStaffTitle.cs" />
+    <Compile Include="OSDataModelCode\XPOStaffTitle.Designer.cs">
+      <DependentUpon>XPOStaffTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOState.cs" />
+    <Compile Include="OSDataModelCode\XPOState.Designer.cs">
+      <DependentUpon>XPOState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOTeamByYear.cs" />
+    <Compile Include="OSDataModelCode\XPOTeamByYear.Designer.cs">
+      <DependentUpon>XPOTeamByYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOUnivBaseBall.cs" />
+    <Compile Include="OSDataModelCode\XPOUnivBaseBall.Designer.cs">
+      <DependentUpon>XPOUnivBaseBall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOUnivBasketBall.cs" />
+    <Compile Include="OSDataModelCode\XPOUnivBasketBall.Designer.cs">
+      <DependentUpon>XPOUnivBasketBall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOUniversity.cs" />
+    <Compile Include="OSDataModelCode\XPOUniversity.Designer.cs">
+      <DependentUpon>XPOUniversity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDataModelCode\XPOUnivFootball.cs" />
+    <Compile Include="OSDataModelCode\XPOUnivFootball.Designer.cs">
+      <DependentUpon>XPOUnivFootball.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OSDataModel.xpo" />
+    <None Include="OSDataModel.xpo.diagram">
+      <DependentUpon>OSDataModel.xpo</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

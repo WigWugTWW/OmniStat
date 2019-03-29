@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Devart (www.devart.com), import template file-->
+<!-- Modifying this generated file will probably render it invalid -->
+<ImportTemplate FormatVersion="4">
+  <Format>Excel2007</Format>
+  <FileSupport>True</FileSupport>
+  <PasswordSupport>False</PasswordSupport>
+  <TargetInfo>
+    <PropertyValue Name="ConnectionName" xml:space="preserve">OSDB.192.168.1.225</PropertyValue>
+    <PropertyValue Name="ConnectionString" xml:space="preserve">Data Source=192.168.1.225;Encrypt=False;Initial Catalog=OSDB;Integrated Security=False;User ID=sa</PropertyValue>
+    <PropertyValue Name="TargetTable" xml:space="preserve">OSDB.dbo.XPOTags</PropertyValue>
+  </TargetInfo>
+  <Options>
+    <PropertyValue Name="FileName" xml:space="preserve">C:\Users\Karl\source\repos\OmniStat\Imports\tags.xlsx</PropertyValue>
+    <PropertyValue Name="ExcelVersion">1</PropertyValue>
+    <PropertyValue Name="DataDirection">0</PropertyValue>
+    <PropertyValue Name="RangeBounds" xml:space="preserve">0;0;0;0</PropertyValue>
+    <PropertyValue Name="SheetName" xml:space="preserve">Sheet1</PropertyValue>
+    <PropertyValue Name="HeaderLocation">0</PropertyValue>
+    <PropertyValue Name="HeaderPosition" xml:space="preserve">0;0</PropertyValue>
+    <PropertyValue Name="AutoDetectRange">true</PropertyValue>
+    <PropertyValue Name="OpenScriptInEditor">false</PropertyValue>
+    <PropertyValue Name="AddTimestampToSynchronizationFileName">false</PropertyValue>
+    <PropertyValue Name="SynchronizationFileName" xml:space="preserve">C:\Users\Karl\Documents\Devart\dbForge Studio for SQL Server\dataimport.sql</PropertyValue>
+    <PropertyValue Name="SynchronizationEditorFileName" xml:space="preserve">C:\Users\Karl\AppData\Local\Temp\Devart_nctnmisg.wee\dataimport.sql</PropertyValue>
+    <PropertyValue Name="DateTimeFormat" xml:space="preserve" />
+    <PropertyValue Name="Boolean" xml:space="preserve">true;false</PropertyValue>
+    <PropertyValue Name="DecimalSeparator" xml:space="preserve">.</PropertyValue>
+    <PropertyValue Name="NullValue" xml:space="preserve">null</PropertyValue>
+    <PropertyValue Name="ThousandSeparator" xml:space="preserve"> </PropertyValue>
+    <PropertyValue Name="WriteLog">false</PropertyValue>
+    <PropertyValue Name="LogFileName" xml:space="preserve">DataImport.log</PropertyValue>
+    <PropertyValue Name="UseBulkInsert">true</PropertyValue>
+    <PropertyValue Name="MaxBatchSize" xml:space="preserve">1048576</PropertyValue>
+    <PropertyValue Name="ErrorHandlingMode">0</PropertyValue>
+    <PropertyValue Name="ExecuteAsSingleTransaction">false</PropertyValue>
+    <PropertyValue Name="TrackAffectedRecords">false</PropertyValue>
+    <PropertyValue Name="SynchronizeType">0</PropertyValue>
+  </Options>
+  <ImportMode>Insert</ImportMode>
+  <ColumnMappings>
+    <ColumnMappingItem>
+      <TargetColumnIndex>-1</TargetColumnIndex>
+      <SourceColumnIndex>0</SourceColumnIndex>
+      <TargetColumnName>Tag</TargetColumnName>
+      <IsKey>false</IsKey>
+      <NullValue />
+      <DefaultValue />
+      <LeftQuoteString />
+      <RightQuoteString />
+      <DateTimeFormat />
+    </ColumnMappingItem>
+    <ColumnMappingItem>
+      <TargetColumnIndex>-1</TargetColumnIndex>
+      <SourceColumnIndex>1</SourceColumnIndex>
+      <TargetColumnName>Parent</TargetColumnName>
+      <IsKey>false</IsKey>
+      <NullValue />
+      <DefaultValue />
+      <LeftQuoteString />
+      <RightQuoteString />
+      <DateTimeFormat />
+    </ColumnMappingItem>
+    <ColumnMappingItem>
+      <TargetColumnIndex>-1</TargetColumnIndex>
+      <SourceColumnIndex>2</SourceColumnIndex>
+      <TargetColumnName>Level</TargetColumnName>
+      <IsKey>false</IsKey>
+      <NullValue />
+      <DefaultValue />
+      <LeftQuoteString />
+      <RightQuoteString />
+      <DateTimeFormat />
+    </ColumnMappingItem>
+    <ColumnMappingItem>
+      <TargetColumnIndex>-1</TargetColumnIndex>
+      <SourceColumnIndex>3</SourceColumnIndex>
+      <TargetColumnName>Description</TargetColumnName>
+      <IsKey>false</IsKey>
+      <NullValue />
+      <DefaultValue />
+      <LeftQuoteString />
+      <RightQuoteString />
+      <DateTimeFormat />
+    </ColumnMappingItem>
+  </ColumnMappings>
+</ImportTemplate>
